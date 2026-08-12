@@ -28,28 +28,12 @@ O objetivo principal da disciplina é capacitar no desenvolvimento de soluções
 
 As atividades desenvolvidas neste repositório abrangem os seguintes tópicos:
 - [x] Revisão da Linguagem C
-- [x] Encapsulamento e Abstração de Dados (TAD)
-- [x] Pilhas (Implementações e Aplicações)
-- [x] Filas (Implementações e Aplicações)
-- [x] Listas Encadeadas (Implementações e Aplicações)
-- [x] Árvores Binárias (Implementações e Aplicações)
-- [x] Métodos de Busca
-- [x] Métodos de Ordenação
+- [ ] Encapsulamento e Abstração de Dados (TAD)
+- [ ] Pilhas (Implementações e Aplicações)
+- [ ] Filas (Implementações e Aplicações)
+- [ ] Listas Encadeadas (Implementações e Aplicações)
+- [ ] Árvores Binárias (Implementações e Aplicações)
+- [ ] Métodos de Busca
+- [ ] Métodos de Ordenação
 
 ---
-
-## 📂 Estrutura do Repositório
-
-O repositório está organizado em diretórios para cada trabalho/projeto prático da disciplina:
-
-```text
-.
-├── trabalho-01/
-│   ├── src/          # Código-fonte desenvolvido em C
-│   ├── doc/          # Relatório técnico do trabalho
-│   └── README.md     # Instruções de compilação e especificações do trabalho
-├── trabalho-02/
-│   ├── src/
-│   ├── doc/
-│   └── README.md
-└── README.md         # Documentação geral do repositório
