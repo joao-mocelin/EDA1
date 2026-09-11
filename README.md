@@ -28,9 +28,9 @@ O objetivo principal da disciplina é capacitar no desenvolvimento de soluções
 
 As atividades desenvolvidas neste repositório abrangem os seguintes tópicos:
 - [x] Revisão da Linguagem C
-- [ ] Encapsulamento e Abstração de Dados (TAD)
-- [ ] Pilhas (Implementações e Aplicações)
-- [ ] Filas (Implementações e Aplicações)
+- [x] Encapsulamento e Abstração de Dados (TAD)
+- [x] Pilhas (Implementações e Aplicações)
+- [x] Filas (Implementações e Aplicações)
 - [ ] Listas Encadeadas (Implementações e Aplicações)
 - [ ] Árvores Binárias (Implementações e Aplicações)
 - [ ] Métodos de Busca
