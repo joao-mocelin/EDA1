@@ -5,7 +5,7 @@ void inicializar(Pilha *p){
 }
 
 int isEmpty(Pilha *p){
-    if(p->topo == NULL){
+    if(p == NULL || p->topo == NULL){
         return 1; //vazia
     }
     return 0; // contem elementos 
@@ -41,9 +41,24 @@ int pop(Pilha *p){
 
 int peek(Pilha *p){
     int valor = 0;
-    if(isEmpty == 1){
+    if(isEmpty(p) == 1){
         return valor;
     }
     valor = p->topo->x;
     return valor;
+}
+
+void imprime_pilha(Pilha *p){
+    if(isEmpty(p) == 1){
+        printf("\nPilha vazia");
+        return;
+    }
+    Nodo *aux = p->topo;
+    printf("\nTOPO");
+    while(aux->prox != NULL){
+        printf(" -> | %d |", aux->x);
+        aux = aux->prox;
+    }
+    printf(" BASE\n");
+    return;
 }

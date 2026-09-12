@@ -11,6 +11,7 @@ typedef struct{
 }Pilha;
 
 void inicializar();
+void imprime_pilha(Pilha *p);
 int isEmpty(Pilha *p);
 int push(Pilha *p, int valor);
 int pop(Pilha *p);

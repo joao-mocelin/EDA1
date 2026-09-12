@@ -24,13 +24,12 @@ int isFull(Pilha *p){ //return 1 if full
     return 0;
 }
 
-int alocar_espaço(Pilha *p){ //return 1 == vet doubles it's size; return 0 == can't realloc memory block
+int alocar_espaco(Pilha *p){ //return 1 == vet doubles it's size; return 0 == can't realloc memory block
     int *aux = realloc(p->vet, sizeof(int) * p->tamanho * 2);
     if(aux == NULL){
         printf("\nErro ao alocar memoria.");
         return 0;
     }
-    free(p->vet);
     p->vet = aux;
     p->tamanho *= 2;
     return 1;
@@ -44,7 +43,7 @@ int push(Pilha *p, int valor){ // return -1 == couldn't initialize stack; return
         }
     }
     if(isFull(p) == 1){
-        if(alocar_espaço(p) == 0){
+        if(alocar_espaco(p) == 0){
             return 0;
         }
     }
@@ -67,4 +66,15 @@ int peek(Pilha *p){
         return 0;
     }
     return p->vet[p->topo];
+}
+
+void imprime_pilha(Pilha *p){
+    if(p->vet == NULL || p->topo == -1){
+        printf("\nPilha vazia");
+        return;
+    }
+    for(int i = p->topo; i >= 0; i--){
+        printf("\n| %d | -> %d",i , p->vet[i]);
+    }
+    return;
 }
