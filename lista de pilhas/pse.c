@@ -55,7 +55,7 @@ void imprime_pilha(Pilha *p){
     }
     Nodo *aux = p->topo;
     printf("\nTOPO");
-    while(aux->prox != NULL){
+    while(aux != NULL){
         printf(" -> | %d |", aux->x);
         aux = aux->prox;
     }
