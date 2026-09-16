@@ -73,3 +73,18 @@ void destruir(Pilha *p){
     }
     return;
 }
+
+void imprime_pilha(Pilha *p){
+    if(isEmpty(p)){
+        return;
+    }
+    Nodo *aux = p->topo;
+    printf("\nTOPO ->");
+    while (aux != NULL)
+    {
+        printf(" | %d | ->",aux->x);
+        aux = aux->post;
+    }
+    printf(" BASE\n");
+    return;
+}
