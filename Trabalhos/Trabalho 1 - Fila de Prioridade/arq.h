@@ -47,6 +47,28 @@ typedef struct{
 FDE *cria_FDE(void);
 FDE_r *cria_FDE_r(void);
 
+int isEmpty_FDE(FDE *f);
+int isEmpty_FDE_r(FDE_r *f);
 
+int buscaNaFrente_FDE(FDE *f, Info *dados);
+int buscaNaFrente_FDE_r(FDE_r *f, Info *dados);
+
+int buscaNaCauda_FDE(FDE *f, Info *dados);
+int buscaNaCauda_FDE_r(FDE_r *f, Info *dados);
+
+int tamanho_FDE(FDE *f);
+int tamanho_FDE_r(FDE_r *f);
+
+int reinicia_FDE(FDE *f);
+int reinicia_FDE_r(FDE_r *f);
+
+FDE *destruir_FDE(FDE *f);
+FDE_r *destruir_FDE_r(FDE_r *f);
+
+int remove_FDE(FDE *f, Info *removido);
+int remove_FDE_r(FDE_r *f, Info *removido);
+
+int insere_FDE(FDE *f, Info inserir);
+int insere_FDE_r(FDE_r *f, Info inserir);
 
 #endif
