@@ -71,4 +71,6 @@ int remove_FDE_r(FDE_r *f, Info *removido);
 int insere_FDE(FDE *f, Info inserir);
 int insere_FDE_r(FDE_r *f, Info inserir);
 
+void imprime_FDE_r(FDE_r *f);
+void imprime_FDE(FDE *f);
 #endif

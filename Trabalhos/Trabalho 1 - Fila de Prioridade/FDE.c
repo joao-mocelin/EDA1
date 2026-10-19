@@ -22,6 +22,9 @@ int isEmpty_FDE(FDE *f){
 }
 
 int tamanho_FDE(FDE *f){
+    if(f == NULL){
+        return 0;
+    }
     return f->tamanho;
 }
 
@@ -49,6 +52,7 @@ int buscaNaCauda_FDE(FDE *f, Info *dados){
 
 int reinicia_FDE(FDE *f){
     if(isEmpty_FDE(f)){
+        f->numIter = 0;
         return SUCESSO;
     }
     Nodo *aux = f->frente;
@@ -59,6 +63,7 @@ int reinicia_FDE(FDE *f){
     }
     f->cauda = f->frente = NULL;
     f->tamanho = 0;
+    f->numIter = 0;
     return SUCESSO;
 }
 
@@ -135,4 +140,21 @@ int insere_FDE(FDE *f, Info inserir){
         aux->prev = tmp;
         return SUCESSO;
     }
+}
+
+void imprime_FDE(FDE *f){
+    if(isEmpty_FDE(f)){
+        printf("\n[Fila Vazia]\n");
+        return;
+    }
+    Nodo *aux = f->frente;
+    printf("  FRENTE\n");
+    int pos = 1;
+    while(aux != NULL){
+        printf("  %3d) chave %6d | %-8s | %s\n", pos, aux->registro.chave,
+               aux->registro.nome, aux->registro.curso);
+        aux = aux->next;
+        pos++;
+    }
+    printf("  CAUDA   (tamanho %d)\n", f->tamanho);
 }
